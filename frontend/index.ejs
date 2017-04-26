@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<nav class="header__nav">
+				<button class="c-hamburger c-hamburger--htx">
+					<span>toggle menu</span>
+				</button>
+				<!-- Site menu data -->
+				<%
+					var menuItems = [
+						{'about': './inner1.html'},
+						{'Yacht&nbsp;zones': './inner1.html'},
+						{'Crew': './inner1.html'},
+						{'Spesifications': './inner1.html'},
+						{'Charter&nbsp;rates ': './inner1.html' },
+						{'Photo&video': './inner1.html' },
+						{'Testimonials ': './inner1.html' },
+						{'Contact&nbsp;us ': './inner2.html' }
+					]
+				%>
+				<!-- Site menu template -->
+				<ul class="site-nav">
+				<%	menuItems.forEach((item, idx)=>{
+							for (key in item) { %>
+								<li class="site-nav__item<% if(!idx){ %> site-nav__item_act<%}%>">
+									<a href="<%=item[key] %>">
+										<%=key %>
+									</a>
+								</li>
+							<%	}
+						});	%>
+				</ul>
+			</nav>
+			<div class="header__item">
+				<div class="top-contacts">
+					<div class="top-contacts__phone">+356 79 49 76 17</div>
+					<div class="top-contacts__post">(Captain)</div>
+					<a class="top-contacts__mail" href="mailto:info@firefly-yachtcharter.com">info@firefly-yachtcharter.com</a>
+				</div>
+			</div>
+			<div class="header__item">
+				<a href="" class="top-logo">
+					<span>FIREFLY</span>
+					MULDER 94 VOYAGER
+				</a>
+			</div>
+			<div class="header__item">
+				<div class="top-txt">
+					Welcome to M.Y Firefly, <br />28.65m of Dutch built quality <br />with long up to 4000 nm range<br />cruising capabilities.
+					<button class="button">Send us an Enquiry</button>
+				</div>
+			</div>c
+		</div>
+	</header>
+	<!-- HEADER end-->
+
+	<div class="content">
+
+		<div class="main">
+			<div class="container">
+				<h1>Firefly yacht charter</h1>
+				<div class="block-welkome">
+					<div class="row">
+						<div class="col">Welcome to M.Y Firefly, 28.65m of Dutch built quality with long range cruising capabilities up to 4000 nm range.
+						A modern masterpiece of innovative design, spacious and opulent interior, impressive volumes and endless comfort.
+						Firefly sleeps eight guests in four luxurious cabins.</div>
+						<div class="col">Firefly will take you to new horizons every day, she will give you access to places that few ever know and all in the highest comfort and luxury.
+						Share extraordinary times with your friends and family on an ultimate journey of discovery with Firefly.</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- SLIDER -->
+			<div class="slider-wrapp">
+				<div class="slider js-slider-1">
+					<% for (var i = 1; i < 3; i++){%>
+						<div class="slider__item">
+							<img class="slider__img" src="images/slider<%=i %>.jpg" alt="" />
+						</div>
+						<% } %>
+				</div>
+				<button class="slider-arrow js-slider-1-left">previos</button>
+				<button class="slider-arrow js-slider-1-right">next</button>
+			</div>
+
+			<div class="container">
+				<div class="h1">Charter Excellence</div>
+				<div class="block-advantages">
+					<div class="row">
+						<%
+							var advantagesItems = [
+								{'Private charters': 'The best way to get the most out of your trip in an ocean is to order our Private Charter Package. This means you will have the boat only for your group (no other people on board) and you can really decide where to go.'},
+								{'wedding charters': 'The once in a lifetime event you have always dreamed about can become a reality if you choose to cruise on board of our luxury yacht. With us, you can be sure your wedding will be everything you have ever dreamed of.'},
+								{'corporate charters': 'Our luxury yacht is perfect for hosting corporate events.  Yachting holiday will only benefit to your business, takes to the next level of informal team communication.'}
+							]
+						%>
+						<% advantagesItems.forEach((item, idx)=>{
+							for (key in item) { %>
+							<div class="col">
+								<div class="advantages">
+									<div class="advantages__ico"></div>
+									<div class="advantages__title"><%=key %></div>
+									<div class="advantages__txt"><%=item[key] %></div>
+								</div>
+							</div>
+						<%	}
+						}); %>
+					</div>
+				</div>
+			</div>
+
+			<!-- SLIDER 2-->
+			<div class="slider-wrapp">
+				<div class="slider js-slider-2">
+					<% for (var i = 1; i < 3; i++){%>
+						<div class="slider__item">
+							<img class="slider__img" src="images/slider-bottom<%=i %>.jpg" alt="" />
+						</div>
+						<% } %>
+				</div>
+				<button class="slider-arrow slider-arrow_blue js-slider-2-left">previos</button>
+				<button class="slider-arrow slider-arrow_blue js-slider-2-right">next</button>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="copyright">© Lorem ipsum dolor sit amet, consectetur adipisicing elit. 2017</div>
+				</div>
+				<div class="col">
+					<div class="infodisign">
+						<a href="http://infodesign.ru/">© Создание сайта и дизайн «ИнфоДизайн» 2017</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<button href="#" class="scrollup">Наверх</button>
+</body>
+
+</html>

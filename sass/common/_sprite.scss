@@ -1,0 +1,222 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$arrow-left-blue-name: 'arrow_left-blue';
+$arrow-left-blue-x: 0px;
+$arrow-left-blue-y: 51px;
+$arrow-left-blue-offset-x: 0px;
+$arrow-left-blue-offset-y: -51px;
+$arrow-left-blue-width: 34px;
+$arrow-left-blue-height: 57px;
+$arrow-left-blue-total-width: 440px;
+$arrow-left-blue-total-height: 108px;
+$arrow-left-blue-image: '../images/sprite.png';
+$arrow-left-blue: (0px, 51px, 0px, -51px, 34px, 57px, 440px, 108px, '../images/sprite.png', 'arrow_left-blue', );
+$arrow-left-name: 'arrow_left';
+$arrow-left-x: 102px;
+$arrow-left-y: 51px;
+$arrow-left-offset-x: -102px;
+$arrow-left-offset-y: -51px;
+$arrow-left-width: 34px;
+$arrow-left-height: 57px;
+$arrow-left-total-width: 440px;
+$arrow-left-total-height: 108px;
+$arrow-left-image: '../images/sprite.png';
+$arrow-left: (102px, 51px, -102px, -51px, 34px, 57px, 440px, 108px, '../images/sprite.png', 'arrow_left', );
+$arrow-right-blue-name: 'arrow_right-blue';
+$arrow-right-blue-x: 34px;
+$arrow-right-blue-y: 51px;
+$arrow-right-blue-offset-x: -34px;
+$arrow-right-blue-offset-y: -51px;
+$arrow-right-blue-width: 34px;
+$arrow-right-blue-height: 57px;
+$arrow-right-blue-total-width: 440px;
+$arrow-right-blue-total-height: 108px;
+$arrow-right-blue-image: '../images/sprite.png';
+$arrow-right-blue: (34px, 51px, -34px, -51px, 34px, 57px, 440px, 108px, '../images/sprite.png', 'arrow_right-blue', );
+$arrow-right-name: 'arrow_right';
+$arrow-right-x: 68px;
+$arrow-right-y: 51px;
+$arrow-right-offset-x: -68px;
+$arrow-right-offset-y: -51px;
+$arrow-right-width: 34px;
+$arrow-right-height: 57px;
+$arrow-right-total-width: 440px;
+$arrow-right-total-height: 108px;
+$arrow-right-image: '../images/sprite.png';
+$arrow-right: (68px, 51px, -68px, -51px, 34px, 57px, 440px, 108px, '../images/sprite.png', 'arrow_right', );
+$dot-act-name: 'dot_act';
+$dot-act-x: 336px;
+$dot-act-y: 51px;
+$dot-act-offset-x: -336px;
+$dot-act-offset-y: -51px;
+$dot-act-width: 14px;
+$dot-act-height: 14px;
+$dot-act-total-width: 440px;
+$dot-act-total-height: 108px;
+$dot-act-image: '../images/sprite.png';
+$dot-act: (336px, 51px, -336px, -51px, 14px, 14px, 440px, 108px, '../images/sprite.png', 'dot_act', );
+$dot-name: 'dot';
+$dot-x: 322px;
+$dot-y: 51px;
+$dot-offset-x: -322px;
+$dot-offset-y: -51px;
+$dot-width: 14px;
+$dot-height: 14px;
+$dot-total-width: 440px;
+$dot-total-height: 108px;
+$dot-image: '../images/sprite.png';
+$dot: (322px, 51px, -322px, -51px, 14px, 14px, 440px, 108px, '../images/sprite.png', 'dot', );
+$ico-anchor-name: 'ico-anchor';
+$ico-anchor-x: 0px;
+$ico-anchor-y: 0px;
+$ico-anchor-offset-x: 0px;
+$ico-anchor-offset-y: 0px;
+$ico-anchor-width: 440px;
+$ico-anchor-height: 51px;
+$ico-anchor-total-width: 440px;
+$ico-anchor-total-height: 108px;
+$ico-anchor-image: '../images/sprite.png';
+$ico-anchor: (0px, 0px, 0px, 0px, 440px, 51px, 440px, 108px, '../images/sprite.png', 'ico-anchor', );
+$ico-bag-name: 'ico-bag';
+$ico-bag-x: 174px;
+$ico-bag-y: 51px;
+$ico-bag-offset-x: -174px;
+$ico-bag-offset-y: -51px;
+$ico-bag-width: 40px;
+$ico-bag-height: 39px;
+$ico-bag-total-width: 440px;
+$ico-bag-total-height: 108px;
+$ico-bag-image: '../images/sprite.png';
+$ico-bag: (174px, 51px, -174px, -51px, 40px, 39px, 440px, 108px, '../images/sprite.png', 'ico-bag', );
+$ico-checkbox-off-name: 'ico-checkbox-off';
+$ico-checkbox-off-x: 290px;
+$ico-checkbox-off-y: 51px;
+$ico-checkbox-off-offset-x: -290px;
+$ico-checkbox-off-offset-y: -51px;
+$ico-checkbox-off-width: 16px;
+$ico-checkbox-off-height: 21px;
+$ico-checkbox-off-total-width: 440px;
+$ico-checkbox-off-total-height: 108px;
+$ico-checkbox-off-image: '../images/sprite.png';
+$ico-checkbox-off: (290px, 51px, -290px, -51px, 16px, 21px, 440px, 108px, '../images/sprite.png', 'ico-checkbox-off', );
+$ico-checkbox-on-name: 'ico-checkbox-on';
+$ico-checkbox-on-x: 306px;
+$ico-checkbox-on-y: 51px;
+$ico-checkbox-on-offset-x: -306px;
+$ico-checkbox-on-offset-y: -51px;
+$ico-checkbox-on-width: 16px;
+$ico-checkbox-on-height: 21px;
+$ico-checkbox-on-total-width: 440px;
+$ico-checkbox-on-total-height: 108px;
+$ico-checkbox-on-image: '../images/sprite.png';
+$ico-checkbox-on: (306px, 51px, -306px, -51px, 16px, 21px, 440px, 108px, '../images/sprite.png', 'ico-checkbox-on', );
+$ico-handwheel-name: 'ico-handwheel';
+$ico-handwheel-x: 136px;
+$ico-handwheel-y: 51px;
+$ico-handwheel-offset-x: -136px;
+$ico-handwheel-offset-y: -51px;
+$ico-handwheel-width: 38px;
+$ico-handwheel-height: 42px;
+$ico-handwheel-total-width: 440px;
+$ico-handwheel-total-height: 108px;
+$ico-handwheel-image: '../images/sprite.png';
+$ico-handwheel: (136px, 51px, -136px, -51px, 38px, 42px, 440px, 108px, '../images/sprite.png', 'ico-handwheel', );
+$ico-hart-name: 'ico-hart';
+$ico-hart-x: 250px;
+$ico-hart-y: 51px;
+$ico-hart-offset-x: -250px;
+$ico-hart-offset-y: -51px;
+$ico-hart-width: 40px;
+$ico-hart-height: 35px;
+$ico-hart-total-width: 440px;
+$ico-hart-total-height: 108px;
+$ico-hart-image: '../images/sprite.png';
+$ico-hart: (250px, 51px, -250px, -51px, 40px, 35px, 440px, 108px, '../images/sprite.png', 'ico-hart', );
+$ico-man-name: 'ico-man';
+$ico-man-x: 214px;
+$ico-man-y: 51px;
+$ico-man-offset-x: -214px;
+$ico-man-offset-y: -51px;
+$ico-man-width: 36px;
+$ico-man-height: 39px;
+$ico-man-total-width: 440px;
+$ico-man-total-height: 108px;
+$ico-man-image: '../images/sprite.png';
+$ico-man: (214px, 51px, -214px, -51px, 36px, 39px, 440px, 108px, '../images/sprite.png', 'ico-man', );
+$spritesheet-width: 440px;
+$spritesheet-height: 108px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($arrow-left-blue, $arrow-left, $arrow-right-blue, $arrow-right, $dot-act, $dot, $ico-anchor, $ico-bag, $ico-checkbox-off, $ico-checkbox-on, $ico-handwheel, $ico-hart, $ico-man, );
+$spritesheet: (440px, 108px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
