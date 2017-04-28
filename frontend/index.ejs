@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="eng">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="shortcut icon" href="./favicon.ico">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OxOY_0nrbw-FKNwhAtZI3ngVXh5bJU4&language=en">
+	</script>
 </head>
 
 <body>
-
 	<header class="header">
 		<div class="container">
 			<nav class="header__nav">
@@ -25,7 +26,7 @@
 						{'Charter&nbsp;rates ': './inner1.html' },
 						{'Photo&video': './inner1.html' },
 						{'Testimonials ': './inner1.html' },
-						{'Contact&nbsp;us ': './inner2.html' }
+						{'Contact&nbsp;us ': './inner1.html' }
 					]
 				%>
 				<!-- Site menu template -->
@@ -43,8 +44,8 @@
 			</nav>
 			<div class="header__item">
 				<div class="top-contacts">
-					<div class="top-contacts__phone">+356 79 49 76 17</div>
-					<div class="top-contacts__post">(Captain)</div>
+					<span class="top-contacts__phone">+356 79 49 76 17</span>
+					<span class="top-contacts__post">(Captain)</span>
 					<a class="top-contacts__mail" href="mailto:info@firefly-yachtcharter.com">info@firefly-yachtcharter.com</a>
 				</div>
 			</div>
@@ -56,41 +57,45 @@
 			</div>
 			<div class="header__item">
 				<div class="top-txt">
-					Welcome to M.Y Firefly, <br />28.65m of Dutch built quality <br />with long up to 4000 nm range<br />cruising capabilities.
+					<div>Welcome to M.Y Firefly, <br />28.65m of Dutch built quality <br />with long up to 4000 nm range<br />cruising capabilities.</div>
 					<button class="button">Send us an Enquiry</button>
 				</div>
-			</div>c
+			</div>
 		</div>
 	</header>
-	<!-- HEADER end-->
+
 
 	<div class="content">
 
 		<div class="main">
+			<!-- HEADER end-->
+
 			<div class="container">
 				<h1>Firefly yacht charter</h1>
-				<div class="block-welkome">
+				<div class="block-welcome">
 					<div class="row">
-						<div class="col">Welcome to M.Y Firefly, 28.65m of Dutch built quality with long range cruising capabilities up to 4000 nm range.
-						A modern masterpiece of innovative design, spacious and opulent interior, impressive volumes and endless comfort.
-						Firefly sleeps eight guests in four luxurious cabins.</div>
-						<div class="col">Firefly will take you to new horizons every day, she will give you access to places that few ever know and all in the highest comfort and luxury.
-						Share extraordinary times with your friends and family on an ultimate journey of discovery with Firefly.</div>
+						<div class="col"><p>Welcome to M.Y Firefly, 28.65m of Dutch built quality with long range cruising capabilities up to 4000 nm range.</p>
+						<p>A modern masterpiece of innovative design, spacious and opulent interior, impressive volumes and endless comfort.</p>
+						<p>Firefly sleeps eight guests in four luxurious cabins.</p></div>
+						<div class="col"><p>Firefly will take you to new horizons every day, she will give you access to places that few ever know and all in the highest comfort and luxury.</p>
+						<p>Share extraordinary times with your friends and family on an ultimate journey of discovery with Firefly.</p></div>
 					</div>
 				</div>
 			</div>
 
-			<!-- SLIDER -->
+			<!-- SLIDER 1 -->
 			<div class="slider-wrapp">
 				<div class="slider js-slider-1">
-					<% for (var i = 1; i < 3; i++){%>
+					<% for (var i = 1; i < 6; i++){%>
 						<div class="slider__item">
 							<img class="slider__img" src="images/slider<%=i %>.jpg" alt="" />
 						</div>
 						<% } %>
 				</div>
-				<button class="slider-arrow js-slider-1-left">previos</button>
-				<button class="slider-arrow js-slider-1-right">next</button>
+				<div class="container">
+					<button class="slider-arrow js-slider-1-left">previos</button>
+					<button class="slider-arrow js-slider-1-right">next</button>
+				</div>
 			</div>
 
 			<div class="container">
@@ -120,39 +125,83 @@
 			</div>
 
 			<!-- SLIDER 2-->
-			<div class="slider-wrapp">
-				<div class="slider js-slider-2">
+			<div class="slider-wrapp slider-wrapp_2">
+				<div class="slider slider_2 js-slider-2">
 					<% for (var i = 1; i < 3; i++){%>
 						<div class="slider__item">
-							<img class="slider__img" src="images/slider-bottom<%=i %>.jpg" alt="" />
+							<div class="container">
+								<div class="testimonials">
+									<div class="h1">testimonials</div>
+									<div class="testimonials__txt">
+										<p>Thank you for this once in a lifetime experience! (Let me rephrase that as it will NOT be <br />a one time experience - we will make sure we do this again) You have an amazing gift <br />to share with people!</p>
+										<p>I can’t believe it’s already been a week since we left the boat. We had a lovely week and good winds and I just wanted to thank you for all your help and information, and answering my endless questions!</p>
+									</div>
+									<div class="testimonials__name">John Smith</div>
+								</div>
+							</div>
 						</div>
 						<% } %>
 				</div>
-				<button class="slider-arrow slider-arrow_blue js-slider-2-left">previos</button>
-				<button class="slider-arrow slider-arrow_blue js-slider-2-right">next</button>
+				<div class="container">
+					<button class="slider-arrow slider-arrow_blue js-slider-2-left">previos</button>
+					<button class="slider-arrow slider-arrow_blue js-slider-2-right">next</button>
+				</div>
 			</div>
 
+			<div class="container">
+				<div class="h1">CHARTER RATES</div>
+				<div class="block-rates">
+					 <div class="row">
+						 <div class="col">
+							 <div class="rates">
+								 <div class="rates__price">€ 65.000</div>
+								 <div class="rates__title">per week DURING the High Season</div>
+								 <div class="rates__txt">July, August, Christmas / New Year & Events <br />with  standard MYBA charter agreement terms </div>
+							 </div>
+						 </div>
+						 <div class="col">
+							 <div class="rates">
+								 <div class="rates__price">€ 60.000</div>
+								 <div class="rates__title">per week DURING the LOW Season</div>
+								 <div class="rates__txt">In all other periods <br />with standard MYBA charter agreement terms</div>
+							 </div></div>
+					 </div>
+				</div>
+			</div>
+
+			<!-- FOOTER START -->
 		</div>
-
-
-
 	</div>
 
 	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="copyright">© Lorem ipsum dolor sit amet, consectetur adipisicing elit. 2017</div>
-				</div>
-				<div class="col">
-					<div class="infodisign">
-						<a href="http://infodesign.ru/">© Создание сайта и дизайн «ИнфоДизайн» 2017</a>
+		<div class="footer__inner">
+			<div class="footer__contacts">
+				<div class="container">
+					<div class="contacts">
+						<div class="h1">contact us</div>
+						<div class="contacts__item">
+							<span>Charter Agent:</span> West Nautical</div>
+						<div class="contacts__item">
+							<span>Telephone:</span> +44 191 478 9920</div>
+						<div class="contacts__item">
+							<span>E-mail:</span> <a href="mailto:geoff.moore@westnautical.com">geoff.moore@westnautical.com</a>, <a href="mailto:tina.collins@westnautical.com">tina.collins@westnautical.com</a>
+						</div>
+						<div class="contacts__item">
+							<span>Address:</span> 1 King Street London EC2V 8AU United Kingdom
+						</div>
+						<div class="contacts__item">
+							<span>Captain:</span> +356 79 49 76 17
+						</div>
+						<div class="contacts__item">
+							<span>Yacht current location:</span> <br />Please, see <a href="http://www.findship.co" rel="nofollow" target="_blank">www.findship.co</a>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div class="map" id="map"></div>
 		</div>
 	</footer>
-	<button href="#" class="scrollup">Наверх</button>
+	<button href="#" class="scrollup">Up</button>
 </body>
 
 </html>

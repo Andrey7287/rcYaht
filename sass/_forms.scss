@@ -94,3 +94,17 @@ fieldset {
 		}
 	}*/
 }
+.button {
+	@include font(24,28,400,$palatino);
+	color: #fff;
+	padding: 16px 40px;
+	border: 3px solid #fff;
+	background: $dark-blue;
+	border-radius: 7px;
+	transition: all .3s ease-in;
+	&:hover {
+		color: $dark-blue;
+		border: 3px solid $dark-blue;
+		background: #fff;
+	}
+}

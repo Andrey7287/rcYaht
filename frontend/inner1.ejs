@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="eng">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500,700" rel="stylesheet">
 	<link rel="shortcut icon" href="./favicon.ico">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OxOY_0nrbw-FKNwhAtZI3ngVXh5bJU4&language=en">
+	</script>
 </head>
 
 <body>
-
 	<header class="header">
 		<div class="container">
-			<nav class="site-nav-outer">
+			<nav class="header__nav">
+				<button class="c-hamburger c-hamburger--htx">
+					<span>toggle menu</span>
+				</button>
 				<!-- Site menu data -->
 				<%
 					var menuItems = [
-						{'О&nbsp;компании': './#about'},
-						{'Услуги': './inner1.html'},
-						{'Сотрудничество': './inner2.html'},
-						{'Карьера': './inner3.html'},
-						{'Пресс-центр': './inner4.html' },
-						{'Контакты': './inner5.html' }
+						{'about': './inner1.html'},
+						{'Yacht&nbsp;zones': './inner1.html'},
+						{'Crew': './inner1.html'},
+						{'Spesifications': './inner1.html'},
+						{'Charter&nbsp;rates ': './inner1.html' },
+						{'Photo&video': './inner1.html' },
+						{'Testimonials ': './inner1.html' },
+						{'Contact&nbsp;us ': './inner1.html' }
 					]
 				%>
 				<!-- Site menu template -->
@@ -38,47 +42,124 @@
 						});	%>
 				</ul>
 			</nav>
+			<div class="header__item">
+				<div class="top-contacts">
+					<span class="top-contacts__phone">+356 79 49 76 17</span>
+					<span class="top-contacts__post">(Captain)</span>
+					<a class="top-contacts__mail" href="mailto:info@firefly-yachtcharter.com">info@firefly-yachtcharter.com</a>
+				</div>
+			</div>
+			<div class="header__item">
+				<a href="" class="top-logo">
+					<span>FIREFLY</span>
+					MULDER 94 VOYAGER
+				</a>
+			</div>
+			<div class="header__item">
+				<div class="top-txt">
+					<div>Welcome to M.Y Firefly, <br />28.65m of Dutch built quality <br />with long up to 4000 nm range<br />cruising capabilities.</div>
+					<button class="button">Send us an Enquiry</button>
+				</div>
+			</div>
 		</div>
 	</header>
-	<!-- HEADER end-->
 
 	<div class="content">
-		<!--  breadcrumbs -->
-		<div class="container">
-			<div class="breadcrumbs">
-				<a class="breadcrumbs__item" href="#">Главная</a>
-				<a class="breadcrumbs__item" href="#">Каталог</a>
-				<span class="breadcrumbs__item">Товар каталога</span>
-			</div>
-		</div>
-		<div class="slider-wrapp">
-			<div class="slider">
-				<div class="slider__item">
-					<img src="images/slider1.jpg" alt="">
+		<div class="main">
+		<!-- HEADER end-->
+
+			<div class="inner"> <!-- Обёртка для всех внутренних -->
+
+				<div class="container">
+					<div class="h1">photogallery</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
 				</div>
-				<div class="slider__item">
-					<img src="images/slider2.jpg" alt="">
+				<!-- SLIDER 1 -->
+				<div class="slider-wrapp">
+					<div class="slider js-slider-1">
+						<% for (var i = 1; i < 8; i++){%>
+							<div class="slider__item">
+								<img class="slider__img" src="images/slider<%=i %>.jpg" alt="" />
+							</div>
+							<% } %>
+					</div>
+					<div class="container">
+						<button class="slider-arrow js-slider-1-left">previos</button>
+						<button class="slider-arrow js-slider-1-right">next</button>
+					</div>
+				</div>
+				<div class="slider-wrapp">
+					<ul class="slider-nav js-slider-nav">
+						<% for (var i = 1; i < 8; i++){%>
+							<li class="slider-nav__item">
+								<div class="slider-nav__inner">
+									<img class="slider-nav__img" src="images/slider<%=i %>_thumb.jpg" alt="" />
+								</div>
+							</li>
+							<% } %>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="inner">
+				<div class="container">
+					<div class="h1">video</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+				</div>
+				<!-- SLIDER 2-->
+			<div class="slider-wrapp slider-wrapp_2">
+				<div class="slider slider_2 js-slider-2">
+					<% for (var i = 1; i < 3; i++){%>
+						<div class="slider__item">
+							<div class="container">
+								<div class="video-content">
+									<iframe width="853" height="480" src="https://www.youtube.com/embed/n-s0-j29SpY?rel=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+						<% } %>
+				</div>
+				<div class="container">
+					<button class="slider-arrow slider-arrow_blue js-slider-2-left">previos</button>
+					<button class="slider-arrow slider-arrow_blue js-slider-2-right">next</button>
 				</div>
 			</div>
-			<button class="slider-arrow left">previos</button>
-			<button class="slider-arrow right">next</button>
-			<div class="slider-dots"></div>
+			</div>
+
+			<!-- FOOTER start-->
 		</div>
 	</div>
 
 	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="copyright">© А.Аспект. Агентство стратегического развития бизнеса. 2017</div>
-				</div>
-				<div class="col">
-					<a href="http://infodesign.ru/" class="infodisign">© Создание сайта <span class="cut">и дизайн</span> «ИнфоДизайн» 2017</a>
+		<div class="footer__inner">
+			<div class="footer__contacts">
+				<div class="container">
+					<div class="contacts">
+						<div class="h1">contact us</div>
+						<div class="contacts__item">
+							<span>Charter Agent:</span> West Nautical</div>
+						<div class="contacts__item">
+							<span>Telephone:</span> +44 191 478 9920</div>
+						<div class="contacts__item">
+							<span>E-mail:</span> <a href="mailto:geoff.moore@westnautical.com">geoff.moore@westnautical.com</a>, <a href="mailto:tina.collins@westnautical.com">tina.collins@westnautical.com</a>
+						</div>
+						<div class="contacts__item">
+							<span>Address:</span> 1 King Street London EC2V 8AU United Kingdom
+						</div>
+						<div class="contacts__item">
+							<span>Captain:</span> +356 79 49 76 17
+						</div>
+						<div class="contacts__item">
+							<span>Yacht current location:</span> <br />Please, see <a href="http://www.findship.co" rel="nofollow" target="_blank">www.findship.co</a>
+						</div>
+					</div>
 				</div>
 			</div>
+			<div class="map" id="map"></div>
 		</div>
 	</footer>
-	<button href="#" class="scrollup">Наверх</button>
+	<button href="#" class="scrollup">Up</button>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ window.jQuery = $;
 
 /* Import project styles and components */
 require('script-loader!slick-carousel');
-require('./modules/ymap');
+require('./modules/gmap');
 import '../sass/css.scss';
 import OnResize from './modules/resize';
 import scrollup from './modules/scrollup';
@@ -34,7 +34,8 @@ $('.c-hamburger').on('click', function(){
 $('.js-slider-1').slick({
 	prevArrow: $('.js-slider-1-left'),
 	nextArrow: $('.js-slider-1-right'),
-	dots: true
+	adaptiveHeight: true,
+	asNavFor: '.js-slider-nav'
 });
 /***********************
 ******* SLIDER 2 *******
@@ -42,8 +43,18 @@ $('.js-slider-1').slick({
 
 $('.js-slider-2').slick({
 	prevArrow: $('.js-slider-2-left'),
-	nextArrow: $('.js-slider-2-right'),
-	dots: true
+	nextArrow: $('.js-slider-2-right')
+});
+
+/***********************
+******* SLIDER NAV *******
+************************/
+
+$('.js-slider-nav').slick({
+	arrow: false,
+	slidesToShow: 7,
+	asNavFor: '.js-slider-1',
+	focusOnSelect: true
 });
 
 /************************

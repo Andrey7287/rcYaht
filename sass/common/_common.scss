@@ -22,9 +22,7 @@ body {
 	flex: auto;
 	font-size: #{$base-font-size}px;
 	line-height: #{$base-line-height}px;
-	.body {
-		max-width: 1920px;
-	}
+	font-weight: 300;
 }
 .content {
 	flex-grow: 1;
@@ -34,6 +32,7 @@ body {
 	margin: 0 auto;
 	padding: 0 $gutter;
 	width: 1170px;
+	overflow: hidden;
 	@each $container, $width in $container-widths {
 		@include mq(#{$container}){
 			width: $width;
@@ -72,9 +71,7 @@ progress {
 	vertical-align: baseline;
 }
 
-//Nav
-
-nav ul {
+ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -87,21 +84,15 @@ a {
 	color: $link;
 	line-height: 1.5;
 	display: inline-block;
+	transition: all .3s ease-in;
 	&:active,
 	&:hover {
 		outline-width: 0;
 		color: $link-hov;
 		text-decoration: none;
-		h3, .h3 {
-			color: $link-hov;
-		}
 	}
 	&[href^="mailto"]{
 
-	}
-	&.block-link {
-		text-decoration: none;
-		color: $default-color;
 	}
 }
 
@@ -147,53 +138,63 @@ abbr[title] {
 // Headers
 
 h1, .h1 {
-	@include font(48, 52, 700);
-	margin: 18px 0;
-	@include mq(sm){
-		@include font(36, 38, 700);
+	@include font(36, 40, 400, $palatino);
+	margin: 20px 0;
+	color: $header;
+	text-align: center;
+	text-transform: uppercase;
+	@include mq(md) {
+		@include font(32, 34, 400, $palatino);
+		margin: 15px 0;
+	}
+	@include mq(xs){
+		@include font(28, 32, 400, $palatino);
+		margin: 10px 0;
 	}
 }
 h2, .h2 {
-	@include font(40, 44, 700);
+	@include font(32, 34, 400, $palatino);
 	color: $header;
 	margin: 15px 0;
-	@include mq(sm){
-		@include font(30, 32, 700);
+	@include mq(md){
+		@include font(28, 32, 400, $palatino);
+		margin: 12px 0;
+	}
+	@include mq(xs){
+		@include font(24, 28, 400, $palatino);
+		margin: 10px 0;
 	}
 }
 h3, .h3 {
-	@include font(32, 36, 700);
+	@include font(28, 32, 400, $palatino);
 	color: $header;
-	margin: 10px 0;
-	@include mq(sm){
-		@include font(24, 26, 700);
+	margin: 12px 0;
+	@include mq(md){
+		@include font(24, 28, 400, $palatino);
+		margin: 10px 0;
 	}
-	a {
-		text-decoration: none;
-		color: $header;
-		display: inline-block;
+	@include mq(xs){
+		@include font(20, 24, 400, $palatino);
+		margin: 7px 0;
 	}
 }
 h4, .h4 {
-	@include font(24, 26, 700);
+	@include font(24, 28, 400, $palatino);
 	color: $header;
 	margin: 10px 0;
 	@include mq(sm){
-		@include font(20, 22, 700);
+		@include font(20, 24, 400, $palatino);
+		margin: 7px 0;
 	}
-}
-h5, .h5 {
-	@include font(20, 24, 700);
-	margin: 10px 0;
-	color: $header;
-	@include mq(sm){
-		@include font(18, 20, 700);
+	@include mq(xs){
+		@include font(18, 22, 400, $palatino);
+		margin: 5px 0;
 	}
 }
 
 //Lists
 
-.inner ul {
+.inner ul:not(.slider-nav) {
 	margin: 7px 0;
 	padding: 0;
 	list-style: none;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
+
 /* Media queries */
 $breakpoint-widths: (
 	lg: 1200px,
@@ -18,26 +20,22 @@ $gutter: 15px;
 
 /* Fonts */
 $open: 'Open Sans', sans-serif;
-$roboto-c: 'Roboto Condensed', sans-serif;
-$roboto: 'Roboto', sans-serif;
+$palatino: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
 $default-font: $open;
-$base-font-size: 16;
+$base-font-size: 18;
 $base-line-height: 30;
-$default-color: #333;
+$default-color: #777;
 
-$header: #112854;
+$header: #333;
 
 /* Colors */
-$red: #bd0112;
-$grey: #555;
-$menu: #2c66d3;
-$bkg-footer: #4f699b;
+$dark-blue: #426c8f;
 
 /* Links */
-$link: $red;
-$link-hov: $red;
+$link: $dark-blue;
+$link-hov: #60cfd8;
 
 /* Components */
-$c-humburger-color: $menu;
-$scroll-up-color: $menu;
+$c-humburger-color: $dark-blue;
+$scroll-up-color: $dark-blue;

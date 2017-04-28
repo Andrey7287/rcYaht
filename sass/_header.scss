@@ -1,1 +1,154 @@
+.header {
+	background: url(../images/bkg-header.jpg) 50% 0 no-repeat;
+	margin-bottom: 33px;
+	@include mq(lg){
+		font-size: 0.8em;
+	}
+	@include mq(md){
+		background: linear-gradient(to bottom, rgba(184,240,255,1) 0%,rgba(228,232,241,1) 35%,rgba(226,231,237,1) 53%,rgba(246,233,227,1) 75%,rgba(233,224,217,1) 99%,rgba(233,224,217,1) 99%);
+		.container {
+			position: relative;
+		}
+	}
+	@include mq(xs) {
+		padding-top: 20px;
+	}
+	&__item {
+		padding-left: 60%;
+		color: $dark-blue;
+		@include mq(lg){
+			padding-left: 49%;
+		}
+		/*MOBILE LAYOUR*/
+		@include mq(md) {
+			padding-left: 0;
+		}
+		&:nth-child(2) { // block with contacts
+			@include mq(md) {
+				float: right;
+				padding-left: $gutter;
+				width: 50%;
+			}
+			@include mq(sm){
+				width: 55%;
+			}
+		}
+		&:nth-child(3) { // block with logo
+			@include mq(md) {
+				float: left;
+				padding-right: $gutter;
+				width: 50%;
+			}
+			@include mq(sm){
+				width: 45%;
+			}
+		}
+		&:nth-child(2),
+		&:nth-child(3) {
+			@include mq(xs){
+				width: auto;
+				float: none;
+				padding: 0;
+			}
+		}
+		&:nth-child(4) { // block with logo
+			@include mq(md) {
+				clear: both;
+			}
+		}
 
+	}
+	&__nav {
+		@include mq(md) {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			width: 220px;
+			text-align: right;
+			line-height: 0;
+		}
+	}
+}
+
+.top-contacts {
+	text-align: right;
+	padding: 15px 0 75px;
+	@include mq(md) {
+		text-align: left;
+		padding: 33px 0 20px;
+	}
+	@include mq(sm) {
+		font-size: 0.8em;
+		padding: 22px 0 20px;
+	}
+	@include mq(xs) {
+		padding: 5px 0 20px;
+		line-height: 1;
+	}
+	&__phone {
+		@include font(33,32,600);
+	}
+	&__post {
+		@include font(24,32,300);
+	}
+	&__mail {
+		@include font(24,32,600);
+		@include mq(xs){
+			width: 100%;
+		}
+	}
+}
+.top-logo {
+	text-decoration: none;
+	text-align: center;
+	@include font(32,36,700);
+	transition: none;
+	@include mq(md) {
+		@include font(24,26,700);
+		text-align: left;
+	}
+	@include mq(sm) {
+		@include font(20,22,700);
+	}
+	@include mq(xs) {
+		width: 100%;
+		text-align: center;
+	}
+	span {
+		@include font(116,120,400,$palatino,32);
+		@include mq(xs) {
+			display: block;
+		}
+	}
+	&::after {
+		display: inline-block;
+		content: " ";
+		@include sprite($ico-anchor);
+		margin: 27px 0 3px;
+		@include mq(md) {
+			display: none;
+		}
+	}
+	&:hover::after {
+		@include sprite($ico-anchor_hov);
+	}
+}
+.top-txt {
+	text-align: center;
+	div {
+		@include font(30,48,300);
+		@include mq(xs) {
+			@include font(24,30,400);
+			padding: 15px 0;
+		}
+	}
+	.button {
+		margin: 73px 0;
+		@include mq(md) {
+			margin: 20px 0;
+		}
+		@include mq(xs) {
+			font-size: 1em;
+		}
+	}
+}

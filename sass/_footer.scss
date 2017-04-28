@@ -1,6 +1,59 @@
+.map {
+	height: 370px;
+}
+
+.map-wrapper {
+	position: relative;
+}
+
 .footer {
-	padding: 25px 0;
-	.infodisign {
-		text-align: right;
+	margin-top: 70px;
+	@include mq(md) {
+		margin-top: 10px;
+	}
+	&__inner {
+		position: relative;
+	}
+	&__contacts {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 20;
+		@include mq(md){
+			position: static;
+		}
+		.container {
+			display: flex;
+			justify-content: flex-end;
+			height: 100%;
+		}
+	}
+	.contacts {
+		width: 360px;
+		background: #e8f9fa;
+		height: 100%;
+		padding: 0 30px;
+		@include mq(md) {
+			width: 100%;
+			padding: 0;
+			background: #fff;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.h1 {
+			margin-bottom: 27px;
+		}
+		&__item {
+			@include font(16,24);
+			span {
+				color: #999;
+			}
+			&:nth-child(5),
+			&:nth-child(6){
+				margin: 9px 0;
+			}
+		}
 	}
 }

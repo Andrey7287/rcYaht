@@ -1,13 +1,41 @@
 .site-nav{
 	display: flex;
+	margin: 15px -10px;
+	@include mq(lg){
+		margin: 15px -15px;
+	}
 	@include mq(md){
 		flex-direction: column;
 		display: none;
+		margin: 0;
+		padding: 20px;
+		background: rgba(255,255,255,.9);
+		transform: translateY(-30px);
 	}
 	&__item {
-		flex-grow: 1;
+		flex: auto;
+		text-align: center;
+		@include mq(md){
+			text-align: right;
+		}
 		a {
 			display: inline-block;
+			width: 100%;
+			@include font(20,30,600);
+			text-decoration: none;
+			text-transform: uppercase;
+			border-radius: 4px;
+			padding: 0 10px;
+			transition: all .3s ease-in;
+			@include mq(lg) {
+				padding: 0;
+			}
+			@include mq(md) {
+				padding: 10px;
+			}
+			&:hover {
+				background: #fff;
+			}
 		}
 	}
 }
