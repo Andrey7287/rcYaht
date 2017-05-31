@@ -41,3 +41,5 @@ $ npm start
 ```
 $ npm run build
 ```
+## Test
+firefly-yachtcharter.b.infodesign.ru
